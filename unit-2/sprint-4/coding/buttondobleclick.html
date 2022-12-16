@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Double Click Color Change</title>
+    <style>
+        h1 {
+            margin-left: 50px;
+        }
+        button {
+            margin: 5px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            margin-left: 50px;
+            border: 1px soli red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">My color should change when I double click the button!</h1>
+    <button>Click here to change my color</button>
+    <script>
+  
+           var h1s = document.getElementById("h1");
+            var btn = addEventListener("dblclick",change);
+        
+  
+           function change() {
+             
+               h1s.style.color = color();
+  
+              
+               
+           }
+         function color() {
+          var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+         }
+          
+    </script>
+  </body>
+  
+</html>

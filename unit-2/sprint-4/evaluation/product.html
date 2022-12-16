@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<style>
+    h1 {
+      text-align: center;
+    }
+    .title {
+        width: 1400px;
+        height: 800px;
+        background-color: cornflowerblue;
+    }
+    .filter {
+        width: 300px;
+        height: 650px;
+        background-color: rgb(10, 250, 198);
+        float: left;
+        border: 1px solid red;
+        
+    }
+    .filter > div {
+        width: 200px;
+        height: 30px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: rgb(100, 82, 0);
+        text-align: center;
+        border-radius: 10px;
+        color: white;
+        padding: 4px;
+        padding-top: 8px;
+        font-size: 18px;
+
+    }
+    #body {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 300px 300px 300px;
+        grid-gap:50px;
+        text-align: center;
+        float: right;
+       
+    }
+    #body > div {
+        border: 1px solid black;
+    }
+    #body > div > p {
+        color: white;
+      font-size: 16px;
+    }
+
+</style>
+<body>
+   <div class="title" >
+    <h1>Jwelery Store</h1>
+    <div class="filter">
+        <div>Home</div>
+        <div>Filter</div>
+        <div> Price</div>
+        <div> Recommendation</div>
+        <div> Brand</div>
+        <div> Dicount</div>
+
+    </div>
+    <div id="body">
+        <div>
+        <img src="https://via.placeholder.com/250x250"/>
+        <p> Ear ring </p>
+        <div>10000$ /-</div>
+        <button onclick="Addcart()">Add to Cart</button>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/250x250"/>
+            <p> Bangles </p>
+            <div>20000$ /-</div>
+            <button onclick="Addcart()">Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/250x250"/>
+                <p>Nacles</p>
+                <div>30000$ /-</div>
+                <button onclick="Addcart()">Add to Cart</button>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/250x250"/>
+                    <p> Bracelet </p>
+                    <div>40000$ /-</div>
+                    <button onclick="Addcart()">Add to Cart</button>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/250x250"/>
+                        <p> Nose pin</p>
+                        <div>50000$ /-</div>
+                        <button onclick="Addcart()">Add to Cart</button>
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/250x250"/>
+                            <p> Anklet </p>
+                            <div>60000$ /-</div>
+                            <button onclick="Addcart()">Add to Cart</button>
+                            </div>
+   </div>
+     
+</body>
+<script>
+    function Addcart() {
+        alert("item added to cart successfully")
+    }
+</script>
+</html>

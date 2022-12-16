@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix DOM</title>
+   <style>
+
+    .class1{
+        background-color: rgb(181, 144, 216);
+        margin: auto;
+        height: 330px;
+        width: 30%;
+    }
+    .class2{
+        text-align: center;
+    }.class3{
+        color: blue;
+        text-align: center;
+    }
+    img{
+        height: 150px;
+        width:120px;
+        padding-top: 20px;
+        margin: auto;
+        margin-left: 155px;
+
+    }
+    .class4{
+        width: 70%;
+        height: 170px;
+        
+        margin: auto;
+        margin-top: 50px;
+    }
+    .img1{
+        margin: 0 0 0 0;
+        height: 150px;
+        float: left;
+        margin-right: 20px;
+    
+    }
+    .h3{
+        
+        margin-top: 10px;
+        color: red;
+    }
+    .div3{
+        float: left;
+        height: 170px;
+        width: 80%;
+        margin: 0px;
+    }
+    .divbig{
+        width: 70%;
+        height: 150px;
+        background-color: orangered;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .div4{
+        width: 40%;
+        height: 150px;
+        float: left;
+        padding: 10px;
+    }
+    .div5{
+        width: 40%;
+        height: 150px;
+        float: left;
+    }
+    .border{
+        width: 10px;
+        height: 100px;
+        background-color: black;
+        float: left;
+        margin-left: 90px;
+    }
+    .h6{
+        margin-left: 220px;
+        margin-right: 0px;
+    }
+    .h7{
+        margin-left: 110px;
+    }
+     button {
+         width: 120px;
+         height: 40px;
+         margin: 5px;
+         border-radius: 8px;
+         font-size: 18px;
+         background-color: beige;
+     }
+</style> 
+</head>
+    <body>
+        <button id="createpage">createpage</button>
+
+    <script>
+        
+       function createpage(e) {
+            e.preventDefault
+            var div = document.createElement('div')
+            div.setAttribute("class","class1")
+            var img = document.createElement('img')
+            img.src= "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg";
+        var h1 = document.createElement('h1')
+        h1.textContent = "Linus Torvalds"
+        var h2 = document.createElement('h1')
+        h2.textContent = "The Creater of Linux and Git"
+        h1.setAttribute("class","class3")
+        h2.setAttribute("class","class2")
+        div.append(img,h1,h2)
+
+        var div2 = document.createElement('div')
+        div2.setAttribute("class","class4")
+        var img1 = document.createElement('img')
+        img1.src = "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg";
+        img1.setAttribute("class","img1")
+        var div3 = document.createElement('div')
+        div3.setAttribute("class","div3")
+        var h3 = document.createElement('h1')
+        h3.setAttribute("class","h3")
+        h3.textContent="SaI Khan"
+        var para = document.createElement('h2')
+        para.textContent = "Salman Khan is the founder of the Khan-Academy which has a mission of providing a free world-class education for anyone,anywhere."
+        div3.append(h3,para)
+        div2.append(img1,div3)
+
+        var divbig = document.createElement("div")
+        divbig.setAttribute('class','divbig')
+        var div4 = document.createElement('div')
+        div4.setAttribute('class','div4')
+        var h4 = document.createElement('h1')
+        h4.textContent = "Ken Thompson"
+        var h5 = document.createElement('h2')
+        h5.textContent = "Designed and implemented the original Unix operating system"
+        div4.append(h4,h5)
+        var border = document.createElement("h1")
+        border.setAttribute('class',"border")
+        var div5 = document.createElement('div')
+        div5.setAttribute('class','div5')
+        var h6 = document.createElement('h1')
+        h6.textContent = "Dennis Ritchie"
+        h6.setAttribute("class","h6")
+        var h7 = document.createElement('h2')
+        h7.setAttribute("class","h7")
+        h7.textContent = "The creator of C Prgramming language"
+        div5.append(h6,h7)
+        divbig.append(div4,border,div5)
+        return document.body.append(div,div2,divbig)
+        }
+        var btn = document.getElementById('createpage')
+        btn.addEventListener('click',createpage)
+
+    </script>
+</body>
+</html>

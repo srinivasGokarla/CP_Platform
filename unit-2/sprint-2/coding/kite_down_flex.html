@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kite Down (Flex)</title>
+    <style>
+         body {
+             background-color: black;
+         }
+        #big {
+           max-width: 70%;
+           height: 75%;
+           background-color:white;
+           margin: auto;
+        }
+  #box {
+    display: flex;
+      flex-flow: wrap;
+      padding-left: 80px;
+    
+  }
+  #box > div {
+      width: 120px;
+      height: 120px;
+      margin: 30px;
+      flex-direction: column-reverse;
+      background-color: rgb(6, 104, 104);
+      border-radius: 6px;
+      
+      
+  }
+  
+    </style>
+</head>
+<body>
+    <div id="big">
+    <div id="box">
+<div>1</div>
+    </div>
+    <div id="box">
+        <div>2</div>
+       <div>3</div>
+ </div>
+ <div id="box">
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+ </div>
+ <div id="box">
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+ </div>
+
+</div>
+</body>
+</html>

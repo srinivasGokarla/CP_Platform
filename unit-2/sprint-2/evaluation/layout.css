@@ -1,0 +1,66 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    body {
+        background-color: black;
+    }
+    .para {
+        padding: 30px;
+        font-weight: 400;
+        font-size: 18px;
+        
+    }
+    #big {
+        width:80%;
+        height:900px;
+        background-color: white;
+        margin: auto;
+    }
+
+    .challange {
+        display: grid;
+        gap: 1%;
+        grid-template-columns:32% 32% 32%;
+        padding-left: 30px;
+        background-color: white;
+        
+        
+    }
+    .challange >div {
+        height: 310px;
+        border: 1px solid black;
+    }
+    .challanges > img {
+        max-width: 100%;
+    }
+    h3 {
+        padding-left: 10px;
+        
+        
+    }
+      p {
+        padding-left: 10px;
+        
+    }
+    
+    .ankle {
+        color: blue;
+        padding-left: 10px;
+    }
+    #expl {
+        display: grid;
+        gap:30px;
+        grid-template-columns:31% 31% 31%;
+        padding-left: 20px;
+        background-color: white;
+    } 
+    #expl > div {
+        height: 120px;
+        border: 1px solid black;
+    }
+    .float{
+        float: right;
+        clear: both;
+        margin-right: 6px;
+    }
+

@@ -1,0 +1,60 @@
+function runProgram(input) {
+  input = input.trim().split("\n")
+  //console.log(input)
+  var testcases = Number(input[0])
+  //console.log(testcases)
+  var line = 1;
+  
+  for(var i = 0; i < testcases; i++) {
+      var [size,target] = input[line++].trim().split(" ").map(Number);
+    //  console.log(size,target)
+        var arr = (input[line++].trim().split(" ").map(Number));
+     // console.log(arr)
+     findPairs(arr,target)
+  }
+  
+}
+
+      function findPairs(arr,target) {
+        var count = 0;
+      for(var j = 0; j < arr.length; j++) {
+      for(var k = j+1; k < arr.length; k++) {
+        
+        if(arr[j] * arr[k] == target) {
+            count++;
+          
+       }
+      }
+             
+
+        }
+           console.log(count)
+      
+      }
+
+
+if (process.env.USERNAME === "USER") {
+  runProgram(`2
+  3 0
+  1 3 2
+  5 4
+  3 2 2 1 5`);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Age Validator</title>
+    <style>
+      #form {
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="pass"></h1>
+    <div id="form">
+    <lable>Year of birth</lable>
+    <input type="number" id="year"/>
+
+    <select  id="gender">
+        
+        <option value="m">male</option>
+        <option value="f">female</option>
+    </select>
+    
+    <button onclick="checkAge()">check</button>
+</div>
+<script>
+    function checkAge() {
+        var yearEle = document.getElementById("year");
+             var year = Number(yearEle.value);
+             var pass_el = document.getElementById("pass");
+             var n = document.getElementById("gender");
+            
+             if (((2021-year) >= 21) && (n.value == "m")) {
+              console.log(n.value);
+               alert("you are eligible for marriage");
+             } else {
+                if(((2021-year) >= 18)&&(n.value == "f")) {
+              alert("you are eligible for marriage");
+               } else {
+               alert("you aren't eligible  marriage");
+               }
+             }
+            }
+</script>
+</body>
+</html>

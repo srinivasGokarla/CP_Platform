@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart1</title>
+    <style>
+        #products {
+            margin: 5% 5% 10% 5%;
+            height: 700px;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            justify-content: center;
+        }
+        img{
+            width: 100%;
+        }
+          </style>
+</head>
+<body>
+    <h1>Welcome to Cart</h1>
+
+    <div id="data"></div>
+    
+    
+</body>
+<script>
+     let items = [
+    {
+        name : "MuscleBlaze Beginner",
+        price: "1299",
+       img: "https://img10.hkrtcdn.com/12134/prd_1213309-MuscleBlaze-Beginners-Protein-2.2-lb-Cookies-and-Cream_c_s.jpg",
+       
+    },
+    {
+        name : "Isopure Zero Carb",
+        price: '5709',
+       img: 'https://img2.hkrtcdn.com/12608/prd_1260761-Isopure-Zero-Carb-Protein-Powder-3-lb-Cookies-Cream_c_s.jpg',
+       
+    },
+    {
+        name : "Ultimate Nutrition",
+        price: '6299',
+       img: 'https://img6.hkrtcdn.com/1130/prd_112915_c_s.jpg',
+       
+    },
+    {
+        name : "ON (Optimum Nutrition)",
+        price: '3174',
+       img: 'https://img2.hkrtcdn.com/14325/prd_1432481-ON-Optimum-Nutrition-Gold-Standard-100-Whey-Protein-2-lb-Double-Rich-Chocolate_c_s.jpg',
+       
+    },
+    {
+        name : "HealthKart 100% ",
+        price: '999',
+       img: 'https://img2.hkrtcdn.com/13488/prd_1348781-MB-Fuel-One-Whey-Protein-Immunity-2.2-lb-Chocolate_c_s.jpg',
+       
+    },
+    {
+        name : "MB Fuel One Whey",
+        price: '5699',
+       img: 'https://img6.hkrtcdn.com/14889/prd_1488805-MB-Fuel-One-Whey-Protein-Immunity-8.8-lb-Chocolate_c_s.jpg',
+       
+    },
+    {
+        name : "MuscleBlaze Biozyme",
+        price: '3699',
+       img: 'https://img2.hkrtcdn.com/14146/prd_1414541-MuscleBlaze-Biozyme-Performance-Whey-4.4-lb-Rich-Chocolate_c_s.jpg',
+       
+    },
+    {
+        name : "MuscleBlaze Raw",
+        price: '31649',
+       img: 'https://img4.hkrtcdn.com/13528/prd_1352733_c_s.jpg',
+       
+    },
+    ];
+
+  let items_json = JSON.stringify(items);
+
+  localStorage.setItem("myitems",  items_json);
+
+  let myitems = localStorage.getItem("myitems")
+
+  myitems = JSON.parse(myitems);
+
+function showProducts() {
+    let data_div = document.getElementById("data");
+
+ myitems.forEach(function(product){
+
+
+let div = document.createElement("div");
+
+  let img = document.createElement("img");
+  img.src = product.img;
+
+  let p_price = document.createElement("p");
+  p_price.innerText = product.price;
+
+  let p_name = document.createElement("p");
+  p_name.innerText = product.name;
+
+  let btn = document.createElement("button");
+  btn.innerText = "add to cart";
+
+  btn.onclick = function() {
+      addtocart(product);
+  };
+
+  div.append(img, p_name, p_price, btn);
+
+  data_div.append(div);
+
+})
+}
+    showProducts()
+
+</script>
+</html>

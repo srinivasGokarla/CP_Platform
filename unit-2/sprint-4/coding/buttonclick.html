@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        h1 {
+            margin-left: 100px;
+        }
+        button {
+            margin: 5px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            margin-left: 100px;
+            border: 1px soli red;
+        }
+    </style>
+    <body>
+        <h1>Change the buttons text color random value</h1>
+        <button id="random">Click here to change my color</button>
+        <script>
+            var btn = document.getElementById("random");
+    
+            function random(number) {
+                return Math.floor(Math.random() * number);
+            }
+    
+            function Change(e) {
+                var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                e.target.style.backgroundColor = randomColor;
+                console.log(e);
+            }
+            btn.addEventListener('click', Change);
+        </script>
+    </body>
+</html>

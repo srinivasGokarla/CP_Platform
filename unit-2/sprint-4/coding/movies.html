@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movies</title>
+    <style>
+        *{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+      #less{
+          max-width: 100%;
+        height: 50px;
+          border: 4px solid white;
+          background-color:grey;
+          
+      }
+      #less > button{
+              float: right;
+              margin-right: 20px;
+              font-size: larger;
+              border-radius: 5px;
+              margin-top: 5px;
+              background-color: aqua;
+             
+          }
+         
+          img{
+              margin-top: 50px;
+              width: 100%;
+              height:600px;
+            
+          }
+          #movies{
+              max-width: 80%;
+            margin: 5% 5% 10% 5%;
+     
+      display: grid;
+      grid-template-columns: 30% 30% 30% ;
+     gap : 5%;;
+    justify-content: center;
+   
+          }
+    
+    </style>
+</head>
+<body>
+    <div id ="less">
+        <a href="signup.html"><button>Signup</button></a>
+        <a href="login.html"><button>Login</button></a>
+         <a href="movies.html"> <button>Home</button></a>
+    </div>
+    <button onclick="sortLH()">IMDB low to high</button>
+    <button onclick="sortHL()">IMDB high to low</button>
+    <div id="mySlideshow"></div>
+    <div id="movies"></div>
+   
+</body>
+</html>
+<script>
+    let images = ["https://i.ytimg.com/vi/DjzblS_G-8U/maxresdefault.jpg","https://i2.wp.com/www.socialnews.xyz/wp-content/uploads/2020/01/26/allu-arjun-s-Ala-Vaikunthapurramuloo-movie-All-Time-Non-Baahubali-Industry-Hit-Posters-1.jpeg?quality=90&zoom=1&ssl=1","https://moviegalleri.net/wp-content/gallery/master-release-posters-hd/Master-Movie-Release-Posters-HD-1e2c7c5.jpg","https://moviegalleri.net/wp-content/uploads/2020/03/Powerstar-Pawan-Kalyan-Vakeel-Saab-Movie-First-Look-Poster-HD.jpg","https://mir-s3-cdn-cf.behance.net/project_modules/1400/51054826796257.5635a9602a829.jpg"]
+
+let containers = document.getElementById("mySlideshow");
+let interval;
+function startSlideshow() {
+
+
+   let counter = 0;
+    interval = setInterval(function(){
+
+        containers.innerHTML = null;
+    if(counter === images.length){
+        counter = 0;
+    }
+        let img = document.createElement("img");
+    img.src = images[counter];
+  transition = "margin-right 2s"
+    containers.append(img);
+ counter+= 1;
+  
+    },2000)
+
+  
+}
+
+startSlideshow();
+let data = [
+    {
+      name: "vakeelsahab",
+      IMDB: "10",
+      img: "https://www.filmibeat.com/ph-big/2020/12/vakeelsaab-2020_16080120881.jpg",
+    },
+    {
+      name: "f2",
+      IMDB: "9.6",
+      img: "https://i.pinimg.com/originals/7f/db/fa/7fdbfad4f9ebcf97dfcd2e3920d1e1de.png",
+    },
+    {
+      name: "AYYAPPANUM KOSHIYUM",
+      IMDB: "9.5",
+      img: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/74f83492378521.5e4a586c19d8d.jpg",
+    },
+    {
+      name: "MASTER",
+      IMDB: "6.4",
+      img: "https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2020/01/15/Thalapathy-Vijay-s-Master-movie-second-Look-Poster-.jpg?quality=90&zoom=1&ssl=1",
+    },
+    {
+      name: "ARJUN REDDY",
+      IMDB: "8.5",
+      img: "https://i.pinimg.com/originals/27/c5/12/27c512369ad3bc0701c3a4e45374a35c.jpg",
+    },
+    {
+      name: "love story",
+      IMDB: "8.5",
+      img: "https://files.prokerala.com/movies/pics/800/naga-chaitanya-sekhar-kammula-film-titled-love-story-first-look-matter-stills-111706.jpg",
+    },
+   
+    {
+      name: "na istam",
+      IMDB: "8.1",
+      img: "https://www.cinejosh.com/gallereys/movies/normal/naa_ishtam_movie_new_wallpapers_0503120213/naa_ishtam_movie_new_wallpapers_0503120213_009.jpg",
+    },
+    {
+      name: "Ala Vaikuntapuramloo",
+      IMDB: "9.2",
+      img: "https://m.media-amazon.com/images/M/MV5BMWU1YmJjYTYtMWE2Ny00YjlkLThlZWEtYmQ5YjE1NjZjMzgwXkEyXkFqcGdeQXVyODgwMjQ1MzQ@._V1_FMjpg_UX1000_.jpg",
+    },
+    {
+      name: "Rangastalam",
+      IMDB: "8.7",
+      img: "https://www.filmibeat.com/ph-big/2017/12/rangasthalam-poster_151279589700.jpg",
+    },
+  ];
+
+let parent = document.getElementById("movies")
+
+function showMovies(d) {
+  parent.innerHTML = null;
+d.forEach(function(movie){
+
+
+let div = document.createElement("div");
+
+  let img = document.createElement("img");
+  img.src = movie.img;
+
+  let movie_name = document.createElement("p");
+  movie_name.textContent = movie.name;
+
+  let movie_rating = document.createElement("p");
+  movie_rating.textContent = movie.IMDB;
+
+  let watch_btn = document.createElement("button");
+  watch_btn.innerText = "watch movie";
+
+  watch_btn.onclick = function() {
+     watchMovie(movie);
+  };
+
+  div.append(img,movie_name, movie_rating ,  watch_btn);
+
+  parent.append(div);
+
+})
+}
+    showMovies(data)
+    
+
+function sortLH() {
+    let arr = data.sort(function(a,b){
+      return a.IMDB - b.IMDB
+    });
+    showMovies(arr);
+    console.log(a.IMDB-b.IMDB)
+}
+
+function sortHL() {
+    let arr = data.sort(function(a,b){
+      return b.IMDB - a.IMDB
+    });
+    showMovies(arr);
+}
+
+
+
+</script>

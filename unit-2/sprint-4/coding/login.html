@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+            #less{
+          max-width: 100%;
+        height: 50px;
+          border: 4px solid white;
+          background-color:grey;
+          
+      }
+      #less > a{
+              float: right;
+              margin-right: 20px;
+              font-size: larger;
+              border-radius: 5px;
+              margin-top: 5px;
+              background-color: aqua;
+             
+          }
+         
+          form{
+              width: 30%;
+              margin: auto;
+              height: 100px;
+              padding: auto;
+              padding-top: 25px;
+              text-align: center;
+              margin-top: 100px;
+              background-color: grey;
+              font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+          }
+      </style>
+</head>
+<body>
+    <div id ="less">
+        <a href="signup.html"><button>Signup</button></a>
+      <a href="login.html"><button>Login</button></a>
+       <a href="movies.html"> <button>Home</button></a>
+    </div>
+    <form onsubmit = "signin(event)" id="myForm">
+        
+        <label>email</label>
+        <input type="text" id="email"><br><br>
+        <label>password</label>
+        <input type="password" id="password"><br>
+        <button>submit</button>
+    </form>
+    <script>
+        function signin(e) {
+
+e.preventDefault();
+   let myForm = document.getElementById("myForm");
+
+let email = myForm.email.value;
+let password = myForm.password.value;
+
+
+let all_users = JSON.parse(localStorage.getItem("users"))
+ 
+all_users.forEach(function (user){
+    if(email === user.email && password === user.password){
+        alert("logged in ");
+        window.location.href = "movies.html"
+    }else{
+        alert("invalid Credentials")
+    }
+});
+        }
+    </script>
+</body>
+</html>

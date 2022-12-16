@@ -1,0 +1,21 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "echo Hello!",
+    "poststart": "echo Bye!",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.1.5",
+    "moment": "^2.29.1",
+    "packageName": "MAJOR.MINOR.PATCH",
+    "semver": "^7.3.5"
+  }
+}

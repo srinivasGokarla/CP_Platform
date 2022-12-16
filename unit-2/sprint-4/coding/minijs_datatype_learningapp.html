@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mini JS Datatype</title>
+    <style>
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 8px;
+            margin: 5px;
+            font-size: 18px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+<h1></h1>
+<p></p>
+        <button id="obj">object</button>
+        <button id="arr">Arrays</button>
+        <button id="fun">Functions</button>
+        <button id="str">Strings</button>
+        <button id="num">Numbers</button>
+       <button id="null">null</button> 
+       <button id="undef">undefined</button>
+
+    <script>
+         var btn_obj = document.getElementById("obj");
+         btn_obj.addEventListener("click",obj);
+       
+         var btn_arr = document.getElementById("arr");
+         btn_arr.addEventListener("click",arr);
+
+         var btn_fun = document.getElementById("fun");
+         btn_fun.addEventListener("click",func);
+
+         var btn_str = document.getElementById("str");
+         btn_str.addEventListener("click",str);
+
+         var btn_num = document.getElementById("num");
+         btn_num.addEventListener("click",num);
+
+         var btn_null = document.getElementById("null");
+         btn_null.addEventListener("click",nul)
+
+         var btn_undef = document.getElementById("undef");
+         btn_undef.addEventListener("click",undef)
+
+    function obj(){
+       
+        var h1s = document.querySelector('h1');
+        h1s.textContent = "OBJECTS"
+        var para = document.querySelector('p');
+        para.textContent = "In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics";
+    }
+ function arr(){
+
+    var h1s = document.querySelector('h1');
+        h1s.textContent = "ARRAYS"
+        var para = document.querySelector('p');
+        para.textContent = "In JavaScript, array is a single variable that is used to store different elements. ... Unlike most languages where array is a reference to the multiple variable, in JavaScript array is a single variable that stores multiple elements.";
+       
+ }
+ function func(){
+
+var h1s = document.querySelector('h1');
+    h1s.textContent = "FUNCTIONS"
+    var para = document.querySelector('p');
+    para.textContent ="A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.";
+}
+function str(){
+
+var h1s = document.querySelector('h1');
+    h1s.textContent = "STRINGS"
+    var para = document.querySelector('p');
+    para.textContent ="The JavaScript string is an object that represents a sequence of characters.In JavaScript, strings are immutable. That means the characters of a string cannot be changed. For example, let a = 'hello'; a[0] = 'H'; console.log(a); // 'hello' However, you can assign the variable name to a new string. For example, let a = 'hello'; a = 'Hello'; console.log(a); // 'Hello'";
+  
+}
+function num(){
+
+var h1s = document.querySelector('h1');
+
+    h1s.textContent = "NUMBERS"
+    var para = document.querySelector('p');
+    para.textContent ="Number is a primitive wrapper object used to represent and manipulate numbers like 37 or -9.25 . ... Values of other types can be converted to numbers using the Number() function. The JavaScript number type is a double-precision 64-bit binary format IEEE 754 value, like double in Java or C#.";
+  
+}
+function nul(){
+
+var h1s = document.querySelector('h1');
+    h1s.textContent = "NULL"
+    var para = document.querySelector('p');
+    para.textContent ="JavaScript null is a primitive type that contains a special value null . JavaScript uses the null value to represent the intentional absence of any object value. If you find a variable or a function that returns null , it means that the expected object couldn't be created.";
+}
+function undef(){
+
+var h1s = document.querySelector('h1');
+    h1s.textContent = "UNDEFINED"
+    var para = document.querySelector('p');
+    para.textContent =" An undefined value in JavaScript is a common occurrence— it means a variable name has been reserved, but currently no value has been assigned to that reference. It is not defined, so we call it undefined . ... The typeof undefined or any undeclared variable is the string 'undefined'";
+  
+}
+
+    </script>
+</body>
+</html>

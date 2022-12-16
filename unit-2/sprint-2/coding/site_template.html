@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Left Bar and Right Content (Grid) </title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #content {
+            background-color: white;
+            margin: auto;
+           height: 800px;
+           max-width:80%;
+        }
+        #box {
+            display: grid;
+            gap:30px;
+            grid-template-columns: auto auto auto;
+            padding-left: 50px;
+            padding-top: 50px;
+            
+          
+        }
+        #box > div:nth-child(1) {
+            background-color: red;
+            border-radius: 8px;
+            padding: 5px;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            max-width: 910px;
+            height: 100px;
+        }
+        #box > div:nth-child(2) {
+            background-color: green;
+            border-radius: 8px;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            padding: 5px;
+           height: 500px;
+           max-width: 300px;
+        }
+        #box > div:nth-child(3) {
+            background-color: teal;
+            border-radius: 8px;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            padding: 5px;
+           height: 500px;
+           max-width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="content">
+    
+    <div id="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        
+    
+    
+
+    </div>
+        
+</div>
+</body>
+</html>

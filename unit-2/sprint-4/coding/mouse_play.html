@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Play</title>
+</head>
+<style>
+    #container {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        background-color: skyblue;
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+    
+    #btn {
+        width: 150px;
+        height: 80px;
+        border-radius: 5px;
+        background-color: red;
+        margin-top: 380px;
+        margin-left:300px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <button id="btn">SUBMIT</button>
+    </div>
+</body>
+
+<script>
+    function changebg() {
+        document.getElementById('btn').style.background = "green"
+    }
+
+    function changeRed() {
+        document.getElementById('btn').style.background = "red"
+    }
+    var btn = document.getElementById('container')
+
+    btn.addEventListener('mouseenter', changebg)
+    btn.addEventListener('mouseleave', changeRed)
+</script>
+</html>
